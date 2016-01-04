@@ -5,11 +5,13 @@ import java.util.HashMap;
 
 import m.dloader.DLoader;
 import m.dloader.LoadSDKHandler;
+import m.dloader.ReflectHelper;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Looper;
 import android.os.Message;
+import android.view.View;
 import dalvik.system.DexClassLoader;
 
 public class ShareSDK extends DLoader {
@@ -411,6 +413,155 @@ public class ShareSDK extends DLoader {
 				t.printStackTrace();
 			}
 			return null;
+		}
+		
+	}
+	
+	public static class OnekeyShare implements Callback {
+		private static final int MSG_ON_COMP = 1;
+		private static final int MSG_ON_CANC = 2;
+		private static final int MSG_ON_ERRO = 3;
+		
+		private Object oks;
+		private PlatformActionListener pa;
+		
+		public OnekeyShare() {
+			try {
+				Class<?> OnekeyShare = dcLoader.loadClass("cn.sharesdk.onekeyshare.OnekeyShare");
+				oks = OnekeyShare.newInstance();
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void disableSSOWhenAuthorize() {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "disableSSOWhenAuthorize");
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setText(String text) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setText", text);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setTitle(String title) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setTitle", title);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setTitleUrl(String titleUrl) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setTitleUrl", titleUrl);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setUrl(String url) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setUrl", url);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setSiteUrl(String siteUrl) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setSiteUrl", siteUrl);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setImagePath(String imagePath) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setImagePath", imagePath);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setImageUrl(String imageUrl) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setImageUrl", imageUrl);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setCallback(PlatformActionListener pa) {
+			try {
+				this.pa = pa;
+				Class<?> ReflectablePlatformActionListener = dcLoader.loadClass("cn.sharesdk.framework.ReflectablePlatformActionListener");
+				Object rpa = ReflectablePlatformActionListener.newInstance();
+				Callback cb = new Callback() {
+					public boolean handleMessage(Message msg) {
+						Handler handler = new Handler(Looper.getMainLooper(), OnekeyShare.this);
+						handler.sendMessage(msg);
+						return false;
+					}
+				};
+				ReflectHelper.invokeInstanceMethod(rpa, "setOnCompleteCallback", MSG_ON_COMP, cb);
+				ReflectHelper.invokeInstanceMethod(rpa, "setOnCancelCallback", MSG_ON_CANC, cb);
+				ReflectHelper.invokeInstanceMethod(rpa, "setOnErrorCallback", MSG_ON_ERRO, cb);
+				ReflectHelper.invokeInstanceMethod(oks, "setCallback", rpa);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void show(Context context) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "show", context);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public void setEditPageBackground(View bgView) {
+			try {
+				ReflectHelper.invokeInstanceMethod(oks, "setEditPageBackground", bgView);
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
+		public boolean handleMessage(Message msg) {
+			if (pa != null) {
+				switch (msg.what) {
+					case MSG_ON_COMP: {
+						Object[] objs = (Object[]) msg.obj;
+						Platform plat = new Platform(objs[0]);
+						int action = (Integer) objs[1];
+						@SuppressWarnings("unchecked")
+						HashMap<String, Object> res = (HashMap<String, Object>) objs[2];
+						pa.onComplete(plat, action, res);
+					} break;
+					case MSG_ON_CANC: {
+						Object[] objs = (Object[]) msg.obj;
+						Platform plat = new Platform(objs[0]);
+						int action = (Integer) objs[1];
+						pa.onCancel(plat, action);
+					} break;
+					case MSG_ON_ERRO: {
+						Object[] objs = (Object[]) msg.obj;
+						Platform plat = new Platform(objs[0]);
+						int action = (Integer) objs[1];
+						Throwable t = (Throwable) objs[2];
+						pa.onError(plat, action, t);
+					} break;
+				}
+			}
+			return false;
 		}
 		
 	}

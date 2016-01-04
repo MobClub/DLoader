@@ -6,9 +6,9 @@ import m.dloader.impl.SMSSDK;
 import m.dloader.impl.SMSSDK.EventHandler;
 import m.dloader.impl.SMSSDK.RegisterPage;
 import m.dloader.impl.ShareSDK;
+import m.dloader.impl.ShareSDK.OnekeyShare;
 import m.dloader.impl.ShareSDK.Platform;
 import m.dloader.impl.ShareSDK.PlatformActionListener;
-import m.dloader.impl.ShareSDK.ShareParams;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -48,12 +48,11 @@ public class MainActivity extends Activity implements OnClickListener {
 				plat.showUser(null);
 			} break;
 			case R.id.btnShare: {
-				Platform plat = ShareSDK.getPlatform("SinaWeibo");
-				plat.SSOSetting(true);
-				ShareParams sp = new ShareParams();
-				sp.setText("Shared by dloader");
-				sp.setImageUrl("http://start.firefoxchina.cn/img/worldindex/logo.png");
-				plat.setPlatformActionListener(new PlatformActionListener() {
+				OnekeyShare oks = new OnekeyShare();
+				oks.disableSSOWhenAuthorize();
+				oks.setText("Shared by dloader");
+				oks.setImageUrl("http://start.firefoxchina.cn/img/worldindex/logo.png");
+				oks.setCallback(new PlatformActionListener() {
 					public void onComplete(Platform platform, int action, HashMap<String, Object> res) {
 						Toast.makeText(MainActivity.this, res.toString(), Toast.LENGTH_SHORT).show();
 					}
@@ -66,7 +65,7 @@ public class MainActivity extends Activity implements OnClickListener {
 						Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
 					}
 				});
-				plat.share(sp);
+				oks.show(this);
 			} break;
 			case R.id.btnVerify: {
 				RegisterPage page = new RegisterPage();
@@ -79,7 +78,7 @@ public class MainActivity extends Activity implements OnClickListener {
 					}
 				});
 				page.show(this);
-			}
+			} break;
 		}
 	}
 	
