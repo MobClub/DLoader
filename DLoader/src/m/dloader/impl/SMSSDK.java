@@ -26,12 +26,16 @@ public class SMSSDK extends DLoader {
 	
 	private static Class<?> SMSSDK;
 
-	public static void initSDK(final Context context, final String appkey, final String appSecrect) {
+	public static synchronized void initSDK(final Context context, final String appkey, final String appSecrect) {
 		initSDK(context, appkey, appSecrect, false);
 	}
 	
-	public static void initSDK(final Context context, final String appkey, final String appSecrect, 
+	public static synchronized void initSDK(final Context context, final String appkey, final String appSecrect, 
 			final boolean warnOnReadContact) {
+		if (SMSSDK != null) {
+			return;
+		}
+		
 		load(context, new LoadSDKHandler() {
 			public void onLoad(DexClassLoader loader) throws Throwable {
 				SMSSDK = loader.loadClass("cn.smssdk.SMSSDK");

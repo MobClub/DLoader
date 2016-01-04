@@ -18,11 +18,15 @@ public class ShareSDK extends DLoader {
 	private static Class<?> ShareSDK;
 	private static Class<?> Platform;
 	
-	public static void initSDK(Context context) {
+	public static synchronized void initSDK(Context context) {
 		initSDK(context, null);
 	}
 	
-	public static void initSDK(final Context context, final String appkey) {
+	public static synchronized void initSDK(final Context context, final String appkey) {
+		if (ShareSDK != null && Platform != null) {
+			return;
+		}
+		
 		load(context, new LoadSDKHandler() {
 			public void onLoad(DexClassLoader loader) throws Throwable {
 				ShareSDK = loader.loadClass("cn.sharesdk.framework.ShareSDK");
