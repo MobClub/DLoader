@@ -1,12 +1,16 @@
-# ShareSDK_DLoader #
+# DLoader #
 
-ShareSDK¹Ù·½¶ÔÍâÌá¹©µÄÊÇ¾²Ì¬jar°ü£¬Ò»µ©·¢ÏÖSDK»òÕß·şÎñ¶ËÓĞbug£¬¿Í»§¶Ë³ÌĞò¾Í²»µÃ²»ÖØĞÂ·¢²¼°æ±¾£¬Õâ¿ÉÄÜµ¼ÖÂºÜ´óµÄËğÊ§¡£DLoader¿ÉÒÔÔÚÒ»¶¨³Ì¶ÈÉÏ½â¾öÁËÕâ¸öÎÊÌâ¡£Ëü½«ShareSDKµÄ¾²Ì¬jar°üÖÆ×÷³Éapk·ÅÖÃÓÚ»¥ÁªÍø£¬¿Í»§¶Ë³ÌĞò²»ÔÙ¼¯³ÉSDKµÄ¾²Ì¬jar°ü£¬¶øÖ»ÊÇĞ¯´øÓÃÓÚ¼ÓÔØapkµÄ¼òµ¥´úÂë¡£Õâ²»½ö¼«´óµØ¼õÉÙÁË×îÖÕ³ÌĞòµÄÌå»ı£¬¶øÇÒÒ»µ©SDK³öÏÖÎÊÌâ£¬¿ÉÒÔÍ¨¹ı±àÒë²¢Ìá½»ĞŞ¸´ºóµÄapk£¬Ê¹¿ìËÙµÃµ½ĞŞ¸´¡£±¾ÎÄ½«¶ÔDLoaderµÄÊ¹ÓÃ·½·¨ÁĞÊöÈçÏÂ£º
+DLoaderÓÃÓÚÔÚÔËĞĞÊ±¼ÓÔØMob²»Í¬²úÆ·SDK£¬Ïà±È½Ï³£¹æ¼¯³ÉMob¸÷ÀàSDKµÄ·½Ê½£¬DLoaderÒÀÀµ¿âÌå»ı¸üĞ¡£¬ÍêÈ«¿ªÔ´£¬¶¯Ì¬Éı¼¶£¬¶øÇÒ¿É¿ØĞÔ¸ü¸ß¡£
+
+µ±Ç°DLoaderÒÑ¾­ÊµÏÖÁË[ShareSDK](http://sharesdk.mob.com/#/sharesdk)ºÍ[SMSSDK](http://sms.mob.com/#/sms)Á½¸ö²úÆ·£¬ÀíÂÛÉÏËü¿ÉÒÔÓ¦ÓÃÔÚMobµÄÈÎºÎ²úÆ·ÉÏ£¬ÉõÖÁMobÒÔÍâµÄ²úÆ·ÉÏ¡£
+
+±¾ÎÄ½«¶ÔDLoaderµÄÊ¹ÓÃ·½·¨ÁĞÊöÈçÏÂ£º
 
 ## Ä¿Â¼·Ö²¼ ##
 
-cloneÏÂÀ´ºóµÄDLoaderÏîÄ¿°üÀ¨3¸öÄ¿Â¼£ºDLibs¡¢DloaderºÍDemos¡£DLibsÀïÃæÊÇShareSDKµÄ×îĞÂSDK£¬ÔÚ·¢²¼´ËÏîÄ¿Ê±£¬ShareSDK¸üĞÂµ½2.6.5°æ±¾£»DLoaderÊÇÏîÄ¿ºËĞÄ´úÂë£»DemosÀïÃæÊÇShareSDKLoader£¬Ò»¸öÑİÊ¾¼ÓÔØShareSDKµÄ³ÌĞò¡ª¡ªDloaderÀíÂÛÉÏ¿ÉÒÔÊ¹ÓÃÔÚmobµÄËùÓĞ²úÆ·ÏßÉÏ£¬µ«Ä¿Ç°Ö»ÓĞShareSDK¡£
+cloneÏÂÀ´ºóµÄDLoaderÏîÄ¿°üÀ¨3¸öÄ¿Â¼£ºDLib¡¢DloaderºÍDemo¡£DLibÀïÃæÊÇShareSDKºÍSMSSDKÁ½¸öÏîÄ¿×îĞÂ°æ±¾µÄºÏÌåAPK£¬ÔÚ·¢²¼´ËÏîÄ¿Ê±£¬ShareSDK¸üĞÂµ½2.6.6¡¢SMSSDK¸üĞÂµ½2.0.0£»DLoaderÊÇÏîÄ¿ºËĞÄ´úÂë£»DemoÀïÃæÊÇDLoaderµÄÑİÊ¾³ÌĞò£¬¶ÔShareSDKºÍSMSSDKÁ½¸öÏîÄ¿µÄÖ÷Òª¹¦ÄÜ½øĞĞµ÷ÓÃ¡£
 
-ËùÓĞµÄÏîÄ¿Ê¹ÓÃEclipseµÄ·½Ê½×éÖ¯´úÂë£¬²¢ÇÒÔİÊ±Ã»ÓĞÇ¨ÒÆµ½ASµÄ¼Æ»®¡£
+ËùÓĞµÄÏîÄ¿Ê¹ÓÃEclipseµÄ·½Ê½×éÖ¯´úÂë¡£
 
 ## ¼¯³É·½·¨ ##
 
@@ -14,38 +18,40 @@ cloneÏÂÀ´ºóµÄDLoaderÏîÄ¿°üÀ¨3¸öÄ¿Â¼£ºDLibs¡¢DloaderºÍDemos¡£DLibsÀïÃæÊÇShareSDKµ
 
 Æä´Î£¬Äã¿ÉÒÔÑ¡Ôñ½«DLoader×ö³Éjar°ü£¬»òÕß¸úDemoÒ»Ñù£¬Ö±½ÓÒÀÀµDLoaderÏîÄ¿¡£ÎÒ±È½Ï½¨ÒéÇ°Õß¡£
 
-×îºó£¬Ïñ[ShareSDKµÄ¹Ù·½ÎÄµµ](http://wiki.mob.com/Android_%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)ÃèÊöµÄÒ»Ñù£¬ÏÈµ÷ÓÃShareSDK.init·½·¨³õÊ¼»¯ShareSDK£¬Ö®ºóµ÷ÓÃPlatformµÄshowUser»òÕßshareÀ´Íê³ÉÒµÎñ¡£
+×îºó£¬Ïñ[ShareSDK](http://wiki.mob.com/Android_%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)ºÍ[SMSSDK](http://wiki.mob.com/android-%E7%9F%AD%E4%BF%A1sdk%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3/)¹Ù·½ÎÄµµÃèÊöµÄÒ»Ñù£¬ÈçÏÈµ÷ÓÃShareSDK.init·½·¨³õÊ¼»¯ShareSDK£¬Ö®ºóµ÷ÓÃPlatformµÄshowUser»òÕßshareÀ´Íê³ÉÒµÎñ£»»òÕßÏÈµ÷ÓÃSMSSDK.init·½·¨³õÊ¼»¯SMSSDK£¬È»ºónewÒ»¸öRegisterPage£¬²¢show³öÀ´ÊµÏÖ¶ÌĞÅÑéÖ¤ÂëĞ£Ñé¡£
 
-**DLoader²»Ê¹ÓÃOnekeyShare GUI¿â**£¬ËùÒÔÖ»ÄÜÍ¨¹ıÎŞ½çÃæ½Ó¿ÚÊµÏÖÒµÎñÂß¼­¡£
+DLibÖĞµÄMobLibs.apkÄ¬ÈÏ¼¯³ÉÁËOnekeyShareºÍSMSSDK GUIÁ½¸ö¿ªÔ´GUIÏîÄ¿¡£
 
 ## ĞŞ¸Ä´úÂë ##
 
-**DLoaderÊÇ¿ªÔ´µÄ£¬Äã¿ÉÒÔÒÔÈÎÒâÄ¿µÄĞŞ¸ÄºÍÊ¹ÓÃÆäÖĞµÄ´úÂë**¡£ÔÚÕâ¸öÏîÄ¿ÖĞ£¬Ò»°ãÄã»áÉæ¼°µ½µÄĞŞ¸Ä°üÀ¨£ºapkÎÄ¼şËù°üº¬µÄÆ½Ì¨ÊıÁ¿¡¢apkÎÄ¼şµÄÏÂÔØÂ·¾¶¡¢¸üĞÂapkÎÄ¼şµÄ²ßÂÔºÍShareSDKÀàµÄwrapper´úÂë¡£
+**DLoaderÊÇ¿ªÔ´µÄ£¬Äã¿ÉÒÔÒÔÈÎÒâÄ¿µÄĞŞ¸ÄºÍÊ¹ÓÃÆäÖĞµÄ´úÂë**¡£ÔÚÕâ¸öÏîÄ¿ÖĞ£¬Ò»°ãÄã»áÉæ¼°µ½µÄĞŞ¸Ä°üÀ¨£ºapkÎÄ¼şËù°üº¬µÄÆ½Ì¨ºÍ±¾µØ¿âÊıÁ¿¡¢apkÎÄ¼şµÄÏÂÔØÂ·¾¶¡¢¸üĞÂapkÎÄ¼şµÄ²ßÂÔºÍÁ½¸öSDKµÄwrapper´úÂë¡£
 
-### ĞŞ¸ÄapkÎÄ¼şËù°üº¬µÄÆ½Ì¨ÊıÁ¿ ###
+### apkÎÄ¼şËù°üº¬µÄÆ½Ì¨ºÍ±¾µØ¿âÊıÁ¿ ###
 
-ÒòÎªDLoaderÌá¹©µÄShareSDK¿âÖ±½ÓÀ´×Ômob¹ÙÍø£¬¶ÔÓÚÌí¼Ó»òÕß¼õÉÙ¼¯³ÉµÄÆ½Ì¨ÊıÁ¿£¬Äã¿ÉÒÔ²Î¿¼[ShareSDKµÄ¹Ù·½ÎÄµµ](http://wiki.mob.com/Android_%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)¡£µ«ÆäÊµ²»Íâºõ¾ÍÊÇÌí¼Ó»òÕßÉ¾³ı¾ßÌåÆ½Ì¨µÄjar°ü¶øÒÑ¡£
+ÒòÎªDLoaderÊ¹ÓÃµÄÁ½Ì×SDKÒÀÀµ¿âÖ±½ÓÀ´×Ômob¹ÙÍø£¬¶ÔÓÚÌí¼Ó»òÕß¼õÉÙShareSDK¼¯³ÉµÄÆ½Ì¨ÊıÁ¿£¬»òÕßÌí¼Ó»ò¼õÉÙSMSSDK±¾µØ¿âµÄÊıÁ¿£¬Äã¿ÉÒÔ²Î¿¼[ShareSDK](http://wiki.mob.com/Android_%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)ºÍ[SMSSDK](http://wiki.mob.com/android-%E7%9F%AD%E4%BF%A1sdk%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3/)µÄ¹Ù·½ÎÄµµ¡£µ«ÆäÊµ²»Íâºõ¾ÍÊÇÌí¼Ó»òÕßÉ¾³ı¾ßÌåÒÀÀµ¿âÎÄ¼ş¶øÒÑ¡£
 
-**Ö»ÄÜÖ§³ÖShareSDK 2.6.5ÒÔºóµÄ°æ±¾**¡£
+**Ö»ÄÜÖ§³ÖShareSDK 2.6.5ºÍSMSSDK2.0.0ÒÔºóµÄ°æ±¾**¡£
 
 ### ĞŞ¸ÄapkÎÄ¼şµÄÏÂÔØÂ·¾¶ ###
 
-DLoaderĞ´ËÀÁËapkÎÄ¼şµÄÏÂÔØÂ·¾¶£¬´úÂëµÄ¾ßÌåÎ»ÖÃÔÚ¡°m.dloader.sharesdk.ShareSDK¡±ÀàµÄ¡°downloadSDK¡±·½·¨
+DLoaderĞ´ËÀÁËapkÎÄ¼şµÄÏÂÔØÂ·¾¶£¬´úÂëµÄ¾ßÌåÎ»ÖÃÔÚ¡°m.dloader.DLoader¡±ÀàµÄ¡°APK_URL¡±×Ö¶Î
 
 ``` java
-private static void downloadSDK(File SDKFile) {
-	try {
-		String urlStr = "https://github.com/ShareSDKPlatform/ShareSDK_DLoader/blob/master/DLibs/ShareSDK/ShareSDK.apk?raw=true";
-		URL ourl = new URL(urlStr);
-		HttpURLConnection conn = (HttpURLConnection) ourl.openConnection();
-		conn.connect();
+public class DLoader {
+	private static final String APK_URL = "https://github.com/MobClub/DLoader/blob/master/DLib/MobLibs.apk?raw=true";
+
 	¡­¡­¡­¡­¡­¡­
 ```
 
 ### ĞŞ¸Ä¸üĞÂapkÎÄ¼şµÄ²ßÂÔ ###
 
-Ä¬ÈÏÇé¿öÏÂDLoaderÃ¿´ÎinitSDK¶¼»áÖØĞÂÏÂÔØapk¡ª¡ªÕâÏÔÊ¾²»ÊÇ±ØÒªµÄ¡£ÓÅ»¯µÄË¼Â·°üÀ¨£ºÏÈÅĞ¶Ï±¾µØÊ±ºòÓĞapk£¬Èç¹ûÃ»ÓĞ£¬ÔòÏÂÔØapk£»Èç¹ûÓĞ£¬Ôò¼ÆËã±¾µØapkµÄmd5£¬È»ºóÏò·şÎñÆ÷ÇëÇóÏÂÔØµØÖ·¡£Èç¹ûµØÖ·²»Îª¿Õ£¬ÔòÏÂÔØĞÂÎÄ¼şÌæ»»£¬·ñÔò²»ĞèÒª¸üĞÂ¡£
+Ä¬ÈÏÇé¿öÏÂDLoaderÃ¿´Îload¶¼»áÖØĞÂÏÂÔØapk¡ª¡ªÕâÏÔÊ¾²»ÊÇ±ØÒªµÄ¡£ÓÅ»¯µÄË¼Â·°üÀ¨£ºÏÈÅĞ¶Ï±¾µØÊ±ºòÓĞapk£¬Èç¹ûÃ»ÓĞ£¬ÔòÏÂÔØapk£»Èç¹ûÓĞ£¬Ôò¼ÆËã±¾µØapkµÄmd5£¬È»ºóÏò·şÎñÆ÷ÇëÇóÏÂÔØµØÖ·¡£Èç¹ûµØÖ·²»Îª¿Õ£¬ÔòÏÂÔØĞÂÎÄ¼şÌæ»»£¬·ñÔò²»ĞèÒª¸üĞÂ¡£
 
-### ĞŞ¸ÄShareSDKÀàµÄwrapper´úÂë ###
+### ĞŞ¸ÄÁ½¸öSDKµÄwrapper´úÂë ###
 
-DLoaderÖĞShareSDKµÄºËĞÄ´úÂëÔÚ¡°m.dloader.sharesdk.ShareSDK.java¡±ÖĞ£¬ÎÒÖ»ÊÇÊµÏÖÁËÒ»²¿·ÖShareSDK³£ÓÃµÄ¹¦ÄÜ£¬Èç¹ûÄãĞèÒª¸ü¶àµÄ¹¦ÄÜ£¬ÔòĞèÒªÄ£·¶ÒÑ¾­´æÔÚµÄ´úÂë£¬×ÔĞĞÌí¼Ó¡£DLoaderµÄwrapperÔ­ÀíºÜ¼òµ¥£¬¾ÍÊÇ**javaµÄ·´Éä**£¬ÀûÓÃ·´ÉäÀíÂÛÉÏ¿ÉÒÔÊµÏÖÔ­ÉúSDKµÄ¶àÓĞ¹«¿ª»òÕßÒş²Ø¹¦ÄÜ¡£
+DLoaderÖĞÁ½¸öSDKµÄºËĞÄ´úÂëÔÚ¡°m.dloader.impl¡±°üÏÂ£¬ÎÒÖ»ÊÇÊµÏÖÁËËüÃÇÒ»²¿·Ö³£ÓÃµÄ¹¦ÄÜ£¬Èç¹ûÄãĞèÒª¸ü¶àµÄ¹¦ÄÜ£¬ÔòĞèÒªÄ£·ÂÒÑ¾­´æÔÚµÄ´úÂë£¬×ÔĞĞÌí¼Ó¡£DLoaderµÄwrapperÔ­ÀíºÜ¼òµ¥£¬¾ÍÊÇ**javaµÄ·´Éä**£¬ÀûÓÃ·´ÉäÀíÂÛÉÏ¿ÉÒÔÊµÏÖÔ­ÉúSDKµÄ¶àÓĞ¹«¿ª»òÕßÒş²Ø¹¦ÄÜ¡£
+
+## ÆäËûËµÃ÷ ##
+
+*DLoader²»Éú²úSDK£¬DLoaderÖ»ÊÇSDKµÄ°áÔË¹¤¡£*
+
