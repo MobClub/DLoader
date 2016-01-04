@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="m.dloader.sharesdk"
+    package="m.dloader.demo"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -28,11 +28,11 @@
 
     <application
         android:debuggable="true"
-        android:label="ShareSDKLoader"
+        android:label="DLoader"
         android:theme="@android:style/Theme.NoTitleBar">
         
         <activity
-            android:name=".demo.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustPan|stateHidden" >
             <intent-filter>

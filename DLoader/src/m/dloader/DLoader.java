@@ -18,8 +18,7 @@ import android.content.res.Resources;
 import dalvik.system.DexClassLoader;
 
 public class DLoader {
-	private static final String APK_URL = "https://github.com/ShareSDKPlatform/ShareSDK_DLoader/blob/master/DLibs/ShareSDK/ShareSDK.apk?raw=true";
-//	private static final String APK_URL = "http://git.oschina.net/alexyu.yxj/MyTmpFiles/raw/master/dloader/MobLibs.apk";
+	private static final String APK_URL = "https://github.com/MobClub/DLoader/blob/master/DLib/MobLibs.apk?raw=true";
 	
 	protected static DexClassLoader dcLoader;
 	

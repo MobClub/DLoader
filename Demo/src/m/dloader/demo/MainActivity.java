@@ -1,4 +1,4 @@
-package m.dloader.sharesdk.demo;
+package m.dloader.demo;
 
 import java.util.HashMap;
 
@@ -9,7 +9,6 @@ import m.dloader.impl.ShareSDK;
 import m.dloader.impl.ShareSDK.Platform;
 import m.dloader.impl.ShareSDK.PlatformActionListener;
 import m.dloader.impl.ShareSDK.ShareParams;
-import m.dloader.sharesdk.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
